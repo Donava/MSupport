@@ -1,6 +1,38 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.j1024.msupport">
+          package="com.j1024.msupport">
 
     <uses-sdk android:minSdkVersion="9"/>
 
+    <!-- umeng update -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- umeng update end -->
+
+    <!-- umeng  analytics -->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--<uses-permission android:name="android.permission.INTERNET"/>-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- umeng  analytics end -->
+
+    <application>
+        <!--
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="you_app_key" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="you_channel_name" />
+            -->
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService"/>
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+    </application>
 </manifest>
