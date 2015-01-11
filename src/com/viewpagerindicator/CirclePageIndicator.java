@@ -1,7 +1,5 @@
 package com.viewpagerindicator;
 /*
- * This file is modified by aoxiao.tjb@tmall.com
- * 
  * Copyright (C) 2011 Patrik Akerfeldt
  * Copyright (C) 2011 Jake Wharton
  *
@@ -35,7 +33,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 
-import com.tmallwireless.common.R;
+import com.j1024.msupport.R;
+
 
 /**
  * Draws circles (one for each view). The current view position is filled and
@@ -67,7 +66,6 @@ public class CirclePageIndicator extends View implements PageIndicator {
     protected int mActivePointerId = INVALID_POINTER;
     protected boolean mIsDragging;
     
-    /**空心圆在实心圆下面还是外包住实心圆，true在下面*/
     private boolean FillCoverStroke = false;
 
 
@@ -575,7 +573,7 @@ public class CirclePageIndicator extends View implements PageIndicator {
             }
         };
     }
-    /**空心圆在实心圆下面还是外面*/
+
     public void enableCoverStyle(boolean b){
     	FillCoverStroke = b;
     }
