@@ -60,4 +60,12 @@ public class VersionUtil {
             return "";
         }
     }
+
+    public static String getVersionName(Context context){
+        try {
+            return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            return "";
+        }
+    }
 }
